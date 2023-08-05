@@ -1,0 +1,259 @@
+Que-1 write a program to print alphabets  A,B,C,D,E,F,G,H using pattern programming logic
+
+package pw_skill;
+
+public class practice
+{
+	public static void main(String[] args)
+	{
+		printA();
+		printB();
+		printC();
+		printD();
+		printE();
+		printF();
+		printG();
+		printH();
+		
+	}
+	// for the print A shape so make printa method
+	public static void printA() 
+	{
+		int n=5;
+		for (int i=1;i<=n;i++)   // for print the row
+		{
+			for(int j=1;j<=n-i;j++)   // for print the space
+			{
+				System.out.print(" ");
+			}
+			for(int j=1;j<=2*i-1;j++)       
+			{
+				if(j==1||j==2*i-1)   // using condition to print the star in the form of alphabates
+				{
+					System.out.print("*");
+				}
+				else
+				{
+					System.out.print(" ");
+				}
+			}
+			System.out.println();
+		}
+	}
+	
+	public static void printB()
+	{
+		int n=5;
+		for(int i=1;i<=n;i++)
+		{
+			for(int j=1;j<=n;j++)
+			{
+				if(i==1||i==n||j==1||j==n)
+				{
+					System.out.print("*");
+				}
+				else 
+				{
+					System.out.print(" ");	
+				}
+				
+			}
+			System.out.println();
+			
+		}
+	}
+	
+	// for print c
+	public static void printC() 
+	{
+		int n=5;
+		for(int i=1;i<=n;i++)
+		{
+			for(int j=1;j<=n;j++)
+			{
+				if(i==1||i==n||j==1)
+				{
+					System.out.print("*");
+				}
+				else
+				{
+					System.out.print(" ");
+				}
+			}
+			System.out.println();
+
+		}
+	}
+	// for print D
+	public static void printD()
+	{
+		int n=5;
+		for(int i=1;i<=n;i++)
+		{
+			for(int j=1;j<=n;j++)
+			{
+				if(i==1||i==n||j==1||j==n)
+				{
+					System.out.print("*");
+				}
+				else
+				{
+					System.out.print(" ");
+				}
+			}
+			System.out.println();
+		}
+
+	}
+	// for print E
+	public static void printE(){
+		int n=5;
+		for(int i=1;i<=n;i++)
+		{
+			for(int j=1;j<=n;j++)
+			{
+				if(i==1||i==n||j==1||(i==n/2+1 ))
+				{
+					System.out.print("*");
+				}
+				else 
+				{
+				     System.out.print(" ");	
+				}
+
+			}
+			System.out.println();
+	
+
+		}
+	}
+	// for f print
+	
+	public static void printF()
+
+	{
+		int n=5;
+		for(int i =1 ;i<=n;i++)
+		{
+			for(int j=1;j<=n;j++)
+			{
+				if(i==1||j==1||i==n/2+1)
+				{
+					System.out.print("*");
+				}
+				else
+				{
+					System.out.print(" ");
+				}
+			}
+			System.out.println();
+		}
+	}
+	// for  print G
+	
+	public static void printG() {
+        int n = 5;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                if ((i == 1 && j >= 2) || (i == n && j >= 2) || (j == 1) || (i == n / 2 + 1 && j >= n / 2 + 1)
+                        || (i >= n / 2 + 1 && j == n)) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    // Function to print letter H
+    public static void printH() {
+        int n = 5;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (j == 1 || j == n || i == n / 2 + 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+		}
+	}
+	
+}
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Que-2 wap a program to print triangle using star pattern programming using
+
+package pw_skill;
+
+public class practice
+{
+	public static void main(String[] args)
+	{
+		int n=5;
+		for(int i=1;i<=n;i++)
+		{
+			for(int j=1;j<=i;j++)
+			{
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
+	}
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Que 3- write programe to print "OR" using pattern programming
+
+package pw_skill;
+
+public class  practice{
+	public static void main(String[] args)
+	{
+		String[] patterns= {
+			   "OOOOOOOOOOOO     RRRRRRRRRRRRRRR",
+			   "O          O     R             R",
+			   "O          O     R             R",
+			   "O          O     R             R",
+			   "O          O     RRRRRRRRRRRRRRR",
+			   "O          O     R",
+			   "O          O     R R", 
+			   "O          O     R   R",
+			   "O          O     R     R",
+			   "O          O     R       R",
+			   "O          O     R         R",
+			   "OOOOOOOOOOOO     R           R"
+				
+				
+				
+				
+		};
+		for(String pattern:patterns)
+		{
+			System.out.println(pattern);
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
