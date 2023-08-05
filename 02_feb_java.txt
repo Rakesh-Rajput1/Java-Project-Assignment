@@ -1,0 +1,85 @@
+Que 1-what is the default value of array for different data types ?
+Ans 1-
+For numeric data types (byte, short, int, long, float, and double), the default value is 0.
+For the char data type, the default value is the null character '\u0000'.
+For the boolean data type, the default value is false.
+For reference data types (arrays of objects or other classes), the default value is null.
+Here are examples of default values for different types of arrays
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Que 2-can you pass negative no inside the array size ?
+Ans 2- No, you cannot pass a negative number as the array size in Java. The size of an array must be a non-negative integer. Attempting to create an array with a negative size will result in a compile-time error.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Que 3-where does array store in jvm memory ?
+Ans 3 -
+In Java, arrays are objects, and their elements are stored in the Java Virtual Machine (JVM) heap memory. The JVM heap is a region of memory used to store objects that are dynamically allocated during the execution of a Java program.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Que 4- what are the disadvantage of array ?
+Ans 4-the disaddvantage of array are 
+1)size of array can not be change after the creation
+2)we only able to store the homogeneous data only
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Que 5-what is an anonymous array in java ? Given an Example ?
+Ans 5-a array without name is called the anonymous array
+It is a one-time use array that is directly used at the point of its creation without storing it in a variable.
+
+Anonymous arrays are typically used in situations where you need a temporary array for a specific purpose and do not need to reuse it later in the code. They are useful when you want to perform operations on an array without the need for a permanent reference to that array
+
+
+public class AnonymousArrayExample {
+    public static void main(String[] args) {
+        // Creating an anonymous integer array and finding its sum
+        int sum = getSum(new int[] {1, 2, 3, 4, 5});
+        System.out.println("Sum: " + sum);
+    }
+
+    public static int getSum(int[] arr) {
+        int sum = 0;
+        for (int num : arr) {
+            sum += num;
+        }
+        return sum;
+    }
+}
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Que 6 -what are the different way to traverse in the array?
+Ans 6- different method are
+1)for loop
+2)Enhance for loop
+3)do while loop
+4)while loop
+5)Using the Arrays.stream() method and forEach()
+6)Using the Arrays.asList() method and forEach():
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Que 7-what is difference between length and lenght() method in java ?
+Ans 7-
+length (Array Property):
+
+length is a property used to get the length of an array.
+It is used with arrays (e.g., int[], char[], String[]) to get the number of elements in the array.
+It is not a method but a public final instance variable of the array class.
+It does not have parentheses after it.
+Example:
+
+
+length() (String Method):
+
+length() is a method used to get the length of a string.
+It is used with strings (instances of the String class) to get the number of characters in the string.
+It is a method and needs parentheses after it to invoke it.

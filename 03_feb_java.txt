@@ -1,0 +1,45 @@
+Que 1-what is string in java ?
+Ans 1-in java string are combination of alphabets character which is inclose in side "" 
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Que 2-Type of string in java ?
+Ans 2-in java string are three type
+
+1)string
+2)stringbuffer
+3)stringbuilder
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Que 3-in how many way you can create string ?
+Ans 3 -in java there is several way of creating string in java 
+
+1)Using String Literals:
+2)Using the new Keyword:
+3)Using the valueOf() Method (Static Factory Method)
+4) Using Character Array:
+5)Using StringBuilder or StringBuffer:
+6)Using String.format():
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Que 4-what is a string constant pool ?
+Ans 4-
+The string constant pool is a special area in the Java heap memory that is used to store a pool of unique string objects. In other words, it is a cache-like mechanism used to optimize memory usage for strings in Java.
+
+When a string is created using a string literal (e.g., "Hello"), Java checks if the string already exists in the string constant pool. If it does, the reference to the existing string object is returned instead of creating a new one. This means that multiple references to the same string literal will point to the same object in the string constant pool, saving memory.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Que 5-what is mean by mutable and immutable object ?
+Ans 5-mutable object mean the object whose value we can modifi and immutable object means whose value can not modified
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Que 6- where exactly is the string constant pool located in memory ?
+Ans 6-in heap memory 
