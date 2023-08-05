@@ -1,0 +1,50 @@
+Que 1-how to create the object in the java ?
+Ans 1-In Java, you can create an object using the new keyword followed by the constructor of the class. Here's the general syntax to create an object:
+
+ClassName objectName = new ClassName();
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Que 2-what is the use of new keyword ?
+Ans 2-The new keyword in Java is used to dynamically allocate memory for objects during runtime. When you create an object using the new keyword, it performs the following tasks:
+
+Memory Allocation: It allocates memory on the heap to store the object's data and instance variables.
+
+Constructor Invocation: It calls the constructor of the class to initialize the object. The constructor is a special method that runs when an object is created and is responsible for initializing the object's state.
+
+Object Creation: It creates an instance of the class, which becomes a unique object in memory with its own set of instance variables and methods.
+
+The new keyword is essential for creating objects in Java because it allows you to create multiple instances of a class, each with its own distinct properties and behavior. Without the new keyword, you wouldn't be able to create and use objects, and object-oriented programming would not be possible.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Que 3-what are the different type of variable in the java ?
+Ans 3-in java there are three type of variable
+
+1) local variable
+2) instance variable
+3) class variable
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Que 4-what is difference between instance variable and local variable?
+Ans 4-
+Instance Variables: Instance variables are typically used to represent the state or characteristics of an object. They store data that should be unique to each instance of the class.
+Local Variables: Local variables are used for temporary storage and calculations within a method or block. They are used for short-term operations and are not meant to store data for the entire lifespan of an object.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Que 5- in which area memory is allocated for instance variable and local variable ?
+Ans 5-memory allocation for the local variable is held in side stack area where instance variale memory allocation is heppened inside the heap
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Que 6-what is method of overloading ?
+Ans 6 -Method overloading is a feature in Java that allows a class to have multiple methods with the same name but different parameter lists. By providing different versions of a method based on the number or type of parameters, Java enables developers to create more flexible and expressive code
