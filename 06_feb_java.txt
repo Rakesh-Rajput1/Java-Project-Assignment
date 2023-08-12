@@ -1,0 +1,160 @@
+Que-1 what is mutable String in java Explain with an Example 
+Ans -1 in java a string is called as mutable in which we are able to modify the string
+
+public class string{
+    public static void main(String[] args) {
+        StringBuilder str1 =new StringBuilder("Ashish ");
+        
+        System.out.println("Dear user string before modify is: " + str1);
+
+        str1.append("Rajput");
+        System.out.println("Dear user string value after the modify the string: " + str1);
+
+    }
+}
+
+
+
+
+Que-2 WAP to reverse a string
+input :"Rakesh Rajput"
+output : "tupjaR hsekaR" 
+
+
+public class string{
+    public static String reverseString(String str){
+        char[] charArray=str.toCharArray();
+        int left=0;
+        int right=charArray.length-1;
+        while(left<right)
+        {
+            char temp=charArray[left];
+            charArray[left]=charArray[right];
+            charArray[right]=temp;
+
+            left++;
+            right--;
+        }
+        return new String(charArray);
+       
+
+    }
+    public static void main(String[] args) {
+        String str1="Rakesh Rajput";
+        String new_val=reverseString(str1);
+        System.out.println(new_val);
+    }
+}
+
+
+
+
+Que-3
+Ans -3
+public class ReverseSentence {
+    public static String reverseSentence(String sentence) {
+        String[] words = sentence.split("\\s+");
+        StringBuilder reversedSentence = new StringBuilder();
+
+        for (String word : words) {
+            String reversedWord = reverseWord(word);
+            reversedSentence.append(reversedWord).append(" ");
+        }
+
+        return reversedSentence.toString().trim();
+    }
+
+    public static String reverseWord(String word) {
+        char[] charArray = word.toCharArray();
+        int left = 0;
+        int right = charArray.length - 1;
+        while (left < right) {
+            char temp = charArray[left];
+            charArray[left] = charArray[right];
+            charArray[right] = temp;
+            left++;
+            right--;
+        }
+        return new String(charArray);
+    }
+
+    public static void main(String[] args) {
+        String input = "Think Twice";
+        String output = reverseSentence(input);
+        System.out.println("Output: " + output);
+    }
+}
+
+
+Que-4 WAP to reverse a sentance while preserving the position
+// input="Think Twice"
+// output ="kniht eciwt
+
+public class string {
+    public static String reverseSentence(String sentence) {
+        String[] words = sentence.split("\\s+");
+        StringBuilder reversedSentence = new StringBuilder();
+
+        for (String word : words) {
+            String reversedWord = reverseWord(word);
+            reversedSentence.append(reversedWord).append(" ");
+        }
+
+        return reversedSentence.toString().trim();
+    }
+
+    public static String reverseWord(String word) {
+        char[] charArray = word.toCharArray();
+        int left = 0;
+        int right = charArray.length - 1;
+        while (left < right) {
+            char temp = charArray[left];
+            charArray[left] = charArray[right];
+            charArray[right] = temp;
+            left++;
+            right--;
+        }
+        return new String(charArray);
+    }
+
+    public static void main(String[] args) {
+        String input = "Think Twice";
+        String output = reverseSentence(input);
+        System.out.println("Output: " + output);
+    }
+}
+
+
+
+Que-5 WAP to sort a string in alphabatically
+Ans
+import java.util.Arrays;
+
+public class SortStringAlphabetically {
+    public static String sortStringAlphabetically(String str) {
+        char[] charArray = str.toCharArray();
+        Arrays.sort(charArray);
+        return new String(charArray);
+    }
+
+    public static void main(String[] args) {
+        String input = "programming";
+        String sortedString = sortStringAlphabetically(input);
+        System.out.println("Sorted String: " + sortedString);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

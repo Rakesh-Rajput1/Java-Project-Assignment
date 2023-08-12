@@ -1,0 +1,119 @@
+Que-1 write a simple string program to take input from user ?
+Ans -1
+import java.util.Scanner;
+public class input {
+    public static void main(String[] args) {
+        Scanner vlu=new Scanner(System.in);
+
+        System.out.print("Dear user please enter string value :");
+
+        System.out.println("Dear user your input value are "+vlu.nextLine());
+
+        vlu.close();
+
+
+
+    }
+    
+}
+
+
+
+Que -2 how to concatenate two string value in java ? give Example
+Ans-2 ,in java we cancatenate the value using + and concate() method 
+
+Example 
+
+public class string {
+
+    public static void main(String[] args) {
+        String str1="hello";
+        String str2=" World";
+        // String full_word=str1+" "+str2;
+        // System.out.println(full_word);
+
+        // concate the string using concate method
+        String result=str1.concat(str2);
+        System.out.println(result);
+        
+    }
+    
+}
+
+
+Que 3-How to find the length of string in the java Explain and given example
+Ans 3- in java we can find the length of string using the length function  
+
+public class string{
+    public static void main(String[] args) {
+        String str1 ="Hello world";
+        int sz=str1.length();
+        System.out.println("Dear user length of given string are :"+sz);
+        
+    }
+}
+
+
+
+
+Que 4-How to compare the string in java give Example ?
+Ans 4-in java we compare the two string using equal method it help to check the content of two string are same or not it provide answere in true and flase
+
+
+public class string{
+    public static void main(String[] args) {
+        String str1="Hello_world";
+        String str2="Hello_world";
+        String str3="Hello_World";
+
+        System.out.println(str1.equals(str2));
+
+
+    }
+}
+
+
+
+
+Que 5-write a programe to calculate the string of "refrigenator"
+Ans 5-
+public class string{
+    public static void main(String[] args) {
+        String str1="refrigenator";
+        int szi=str1.length();
+        System.out.println("Dear user length of string is :"+szi);
+    }
+}
+
+
+
+Qu6 - write a program to check letter word e present in the umbrella word
+Ans contains method are used to check the value it provide answere in the true and false
+public class string{
+    public static void main(String[] args) {
+        String str1="umbrella";
+        String str2="e";
+        System.out.println(str1.contains(str2));   
+    }
+}
+
+
+Que 7-Write a program to Delete all constant from the word "Hello,have a good day"
+Ans 7-
+public class string{
+    public static String removeConstants(String str){
+        String constantsRegex="[^aeiouAEIOU\\s,]";
+        String result=str.replaceAll(constantsRegex,"");
+        return result;
+    }
+    public static void main(String[] args) {
+        String word="Hello,have a good day";
+        String result =removeConstants(word);
+
+        System.out.println("Dear user value of string after remove the constant:"+result);
+    }
+}
+
+
+
+ 

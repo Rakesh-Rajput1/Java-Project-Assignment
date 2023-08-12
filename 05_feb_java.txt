@@ -1,0 +1,311 @@
+Que-1 write a program to remove Duplicate from string ?
+Ans
+public class string{
+    public static String removeDuplicates(String str){
+        StringBuilder result=new StringBuilder();
+        boolean[] visited =new boolean[256];
+        
+        for(int i=0;i<str.length();i++)
+        {
+            char currentChar=str.charAt(i);
+            if(!visited[currentChar])
+            {
+                visited[currentChar]=true;
+                result.append(currentChar);
+            }
+        }
+        return result.toString();
+    }
+    public static void main(String[] args) {
+        String str1="Ashish Ashish Rajput";
+        String name=removeDuplicates(str1);
+        System.out.println(name);
+    }
+}
+
+
+
+
+
+Que -2 write the program to print the Duplicate character from string 
+Ans -2
+
+import java.util.Map;
+import java.util.HashMap;
+
+public class string{
+    public static void printDuplicateCharacters(String str){
+        Map<Character,Integer> charCountMap=new HashMap<>();
+
+
+        for(char c:str.toCharArray())
+        {
+          charCountMap.put(c,charCountMap.getOrDefault(c, 0)+1);       // it will find the character put inside hashtable in the kwy and value pair where key is that char and value is the frequency of that character
+        }
+
+        for(Map.Entry<Character,Integer>entry:charCountMap.entrySet())
+        {
+            if(entry.getValue()>1){
+                System.out.println("Duplicate character'" + entry.getKey()+"'occurs'"+entry.getValue()+" time. ");
+            }
+        }
+
+
+
+    }
+    public static void main(String[] args) {
+        String inputString="hello";
+        System.out.println("Given string:"+inputString);
+        System.out.println("Duplicate character in the string:");
+        printDuplicateCharacters(inputString);
+
+
+        
+    }
+}
+
+
+
+Que 3-write a program to check given string "2552" is palidnrome or not
+Ans -
+public class string{
+    public static boolean isPlaindrome(String str)
+    {
+        int start=0;
+        int end =str.length()-1;
+        while(start<end)
+        {
+            if(str.charAt(start)!=str.charAt(end))
+            {
+                return false;
+            }
+            start++;
+            end--;
+        }
+        return true;
+    }
+    public static void main(String[] args) {
+        String val="2552";
+        boolean isplain=isPlaindrome(val);
+        System.out.println("is given string are palindrome :" + isplain);
+    }
+}
+
+
+
+Que 4-wap to count the number of constants,vowels,special character in a string
+Ans 4-
+public class string{
+    public static void countvalueschar(String str)
+    {
+        int vowelcount=0;
+        int constant=0;
+        int specialcharcount=0;
+        str=str.toLowerCase();
+
+
+        for(int i=0;i<str.length();i++)
+        {
+            char ch=str.charAt(i);
+            if(ch>='a' && ch<='z')
+            {
+                if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+                {
+                    vowelcount++;
+                }
+                else
+                {
+                  constant++;
+                }
+
+            }
+            else{
+                specialcharcount++;
+            }
+        }
+        System.out.println("Number of vowels:"+ vowelcount);
+        System.out.println("Number of constant:"+ constant);
+        System.out.println("Number of specialcount:"+ specialcharcount);
+
+    }
+    public static void main(String[] args) {
+        String val="Hello world !";
+        countvalueschar(val);
+        
+    }
+}
+
+
+Que 5-wap to implement Anagram checking least inbuilt methods being used 
+Ans 5-
+public class AnagramChecker {
+    public static void main(String[] args) {
+        String str1 = "listen";
+        String str2 = "silent";
+
+        boolean isAnagram = areAnagrams(str1, str2);
+
+        if (isAnagram) {
+            System.out.println(str1 + " and " + str2 + " are anagrams.");
+        } else {
+            System.out.println(str1 + " and " + str2 + " are not anagrams.");
+        }
+    }
+
+    public static boolean areAnagrams(String str1, String str2) {
+        if (str1.length() != str2.length()) {
+            return false;
+        }
+
+        int[] charCount = new int[26];
+
+        for (int i = 0; i < str1.length(); i++) {
+            char ch1 = str1.charAt(i);
+            char ch2 = str2.charAt(i);
+
+            charCount[ch1 - 'a']++;
+            charCount[ch2 - 'a']--;
+        }
+
+        for (int count : charCount) {
+            if (count != 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}
+
+
+Que 6-WAP to implement pangram checking with least inbuilt method being used ?
+Ans 6
+public class PangramChecker {
+    public static void main(String[] args) {
+        String sentence = "The quick brown fox jumps over the lazy dog";
+
+        boolean isPangram = isPangram(sentence);
+
+        if (isPangram) {
+            System.out.println("The sentence is a pangram.");
+        } else {
+            System.out.println("The sentence is not a pangram.");
+        }
+    }
+
+    public static boolean isPangram(String sentence) {
+        // Create an array to mark the presence of each letter in the alphabet
+        boolean[] alphabetPresence = new boolean[26];
+
+        // Convert the sentence to lowercase for case-insensitive comparison
+        sentence = sentence.toLowerCase();
+
+        // Iterate through each character in the sentence
+        for (char ch : sentence.toCharArray()) {
+            // If the character is a lowercase letter, mark its presence in the array
+            if (ch >= 'a' && ch <= 'z') {
+                alphabetPresence[ch - 'a'] = true;
+            }
+        }
+
+        // Check if all letters in the alphabet are present in the sentence
+        for (boolean presence : alphabetPresence) {
+            if (!presence) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}
+
+
+
+// Que-7 WAP to find if string contains all unique character ?
+Ans 
+import java.util.HashSet;
+
+public class UniqueCharacterChecker {
+    public static void main(String[] args) {
+        String inputString = "abcdefg";
+
+        boolean hasAllUniqueChars = hasAllUniqueCharacters(inputString);
+
+        if (hasAllUniqueChars) {
+            System.out.println("The string contains all unique characters.");
+        } else {
+            System.out.println("The string does not contain all unique characters.");
+        }
+    }
+
+    public static boolean hasAllUniqueCharacters(String str) {
+        HashSet<Character> charSet = new HashSet<>();
+
+        for (char ch : str.toCharArray()) {
+            if (charSet.contains(ch)) {
+                return false;
+            }
+            charSet.add(ch);
+        }
+
+        return true;
+    }
+}
+
+
+
+
+// Que-8 wap to find maximum occuring character in a string
+Ans 
+import java.util.HashMap;
+
+public class MaxOccurringCharacterFinder {
+    public static void main(String[] args) {
+        String inputString = "hello world";
+
+        char maxOccurringChar = findMaxOccurringCharacter(inputString);
+
+        System.out.println("The maximum occurring character is: " + maxOccurringChar);
+    }
+
+    public static char findMaxOccurringCharacter(String str) {
+        HashMap<Character, Integer> charCountMap = new HashMap<>();
+
+        for (char ch : str.toCharArray()) {
+            charCountMap.put(ch, charCountMap.getOrDefault(ch, 0) + 1);
+        }
+
+        char maxOccurringChar = ' ';
+        int maxOccurrence = 0;
+
+        for (char ch : charCountMap.keySet()) {
+            int occurrence = charCountMap.get(ch);
+            if (occurrence > maxOccurrence) {
+                maxOccurringChar = ch;
+                maxOccurrence = occurrence;
+            }
+        }
+
+        return maxOccurringChar;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
