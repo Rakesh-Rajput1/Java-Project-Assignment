@@ -1,0 +1,89 @@
+Que-1 what do mean by multithreading ? why is it important ?
+Ans 1-Multithreading refers to the concurrent execution of multiple threads within a single process. A thread is the smallest unit of execution in a program, and multithreading allows a program to execute multiple threads concurrently, thereby achieving parallelism and improving overall performance and responsiveness.
+
+In a single-threaded program, tasks are executed sequentially one after the other. However, in a multithreaded program, different threads can execute different tasks simultaneously. Each thread has its own program counter, register set, and stack, but they share the same memory space. This allows threads to communicate and share data efficiently.
+
+Multithreading is important for several reasons:
+
+Improved Performance: Multithreading can lead to better performance by utilizing multiple CPU cores and enabling parallel processing. This can significantly speed up CPU-bound tasks and make the program more efficient.
+
+Responsiveness: In GUI applications or server applications, multithreading allows the user interface to remain responsive even while performing time-consuming tasks in the background. This ensures a smooth user experience.
+
+Resource Utilization: Multithreading allows better utilization of system resources. For example, in a server application, multiple threads can handle multiple client requests simultaneously, increasing the system's capacity to serve more clients concurrently.
+
+Asynchronous Programming: Multithreading enables asynchronous programming, where tasks can run concurrently without waiting for each other to complete. This is useful in scenarios where waiting for certain tasks to finish can lead to inefficiency.
+
+Real-time Applications: Multithreading is essential for building real-time applications where tasks must be completed within specific time constraints. It allows timely responses to events or inputs.
+
+
+
+Que-2 what are the benefits of using of Multithreading ?
+Ans 2-Improved Performance: Multithreading allows a program to execute multiple tasks simultaneously, utilizing multiple CPU cores and achieving parallelism. This can lead to significant performance improvements, especially for CPU-bound tasks.
+
+Responsiveness: In applications with graphical user interfaces (GUI) or interactive components, multithreading ensures that the application remains responsive even when performing time-consuming tasks. This enhances the user experience by preventing the application from becoming unresponsive or "freezing."
+
+Resource Utilization: Multithreading allows better utilization of system resources, such as CPU and memory. It enables efficient use of available resources by dividing tasks among multiple threads.
+
+Concurrency: Multithreading enables concurrent execution of tasks, which is particularly useful for handling multiple client requests in server applications. It allows the application to serve multiple clients simultaneously.
+
+Asynchronous Programming: Multithreading facilitates asynchronous programming, where tasks can run independently and concurrently without waiting for each other to complete. This is beneficial for applications that require non-blocking operations or efficient handling of multiple tasks.
+
+Real-time Processing: Multithreading is essential for building real-time applications, where tasks must be completed within specific time constraints. It allows timely responses to events or inputs, crucial in areas like robotics, simulations, and audio/video processing.
+
+Simplicity in Design: In certain cases, multithreading can simplify program design. For example, by dividing a complex task into multiple threads, each responsible for a specific part of the task, the overall program logic can be easier to understand and maintain.
+
+Scalability: Multithreading can improve the scalability of an application, enabling it to handle an increasing number of tasks or users efficiently.
+
+
+
+
+Que 3-what is thead in java ?
+Ans 3-In Java, a thread is the smallest unit of execution within a process. It is a lightweight sub-process that can run concurrently with other threads in the same process. Threads enable a Java program to perform multiple tasks simultaneously, achieving concurrency and parallelism.
+
+Each Java application has at least one thread, which is the main thread that starts the program's execution. This main thread can create additional threads to perform different tasks independently. Each thread has its own call stack, program counter, and local variables, but they share the same memory space, allowing them to access shared data
+
+
+
+Que 4-what are the two ways of implementing thread in java?
+Ans 4-In Java, there are two main ways to implement threads: by extending the Thread class or by implementing the Runnable interface.
+
+
+
+Que 5-what's the difference between thread and process ?
+Ans 5-Thread: A thread is the smallest unit of execution within a process. Multiple threads can exist within a single process, and they share the same resources (such as memory space) of the parent process. Threads have their own execution context (program counter, register set, and stack) but share the same data space.
+Process: A process is an independent and self-contained unit of execution with its own memory space, file handles, and other system resources. Each process runs in a separate memory space, and processes are isolated from each other.
+
+
+
+
+Que 6-How can we create daemon threads ?
+Ans 6-In Java, you can create daemon threads by setting the thread's daemon flag to true before starting the thread. A daemon thread is a thread that runs in the background and does not prevent the JVM from exiting if all other non-daemon threads have finished their execution
+
+
+
+Que 7- what are the wait() and sleep() mehtods?
+Ans Both wait() and sleep() are methods in Java used for managing threads, but they serve different purposes:
+
+wait() method:
+
+The wait() method is used to make a thread temporarily release the monitor (or lock) on the object it is called on and enter a waiting state.
+It is used for synchronization and inter-thread communication, often used in multi-threaded programs when one thread needs to wait for a specific condition to be met before continuing its execution.
+It should be called from within a synchronized block or method to ensure proper synchronization and avoid IllegalMonitorStateException.
+The thread will remain in the waiting state until another thread calls the notify() or notifyAll() method on the same object, or until it times out (if a timeout is specified).
+
+
+sleep() method:
+
+The sleep() method is used to pause the execution of the current thread for a specific amount of time.
+It is useful when you want to introduce a delay or wait for a certain period without releasing any locks or affecting other threads.
+Unlike wait(), sleep() is a static method and can be called from any context.
+The thread will sleep for the specified time and then continue its execution.
+The syntax to call the sleep() method is as follows:
+
+
+
+
+
+
+
+

@@ -1,0 +1,73 @@
+Que-1 what is lambda Experision of java 8?
+Ans A lambda expression is essentially a block of code that can be passed around as an argument to methods, stored in variables, or returned from methods. It allows you to treat functions as first-class citizens in Java.
+
+The syntax of a lambda expression consists of the following components:
+
+A parameter list: Enclosed in parentheses, it specifies the input arguments of the lambda function.
+The arrow token ->: It separates the parameter list from the body of the lambda expression.
+The body: It represents the implementation of the lambda function.
+The general syntax of a lambda expression is as follow
+
+
+(parameter1, parameter2, ...) -> { // Lambda expression body }
+
+
+
+
+Que 2 can you pass lambda experision to a method ? when ?
+Ans 
+Yes, you can pass lambda expressions as arguments to methods in Java. This is one of the main benefits of lambda expressions, as it allows you to treat functions as first-class citizens and pass them around as data.
+
+To pass a lambda expression as an argument to a method, you need to define the method parameter with a functional interface type. A functional interface is an interface that has exactly one abstract method and can be used as the target for a lambda expression.
+
+
+
+Que 3-what is functional interface in java 8?
+Ans 3-
+In Java 8, a functional interface is an interface that has exactly one abstract method. Functional interfaces are a key concept in the introduction of lambda expressions and method references, which are powerful features of Java 8 that facilitate functional-style programming.
+
+Functional interfaces serve as the target for lambda expressions, allowing us to treat functions as first-class citizens in Java. They provide a way to represent a single unit of behavior, and the lambda expressions that implement the abstract method of the functional interface can be used wherever an object of that functional interface type is expected.
+
+To define a functional interface in Java, you can use the @FunctionalInterface annotation (although it's not required for the interface to be a functional interface). The annotation helps to indicate that the interface is intended to be used as a functional interface, and the compiler will enforce the single abstract method constraint.
+
+
+
+
+Que 4- why we do use lambda  experision in java?
+Ans to reduce the code
+
+Lambda expressions in Java are used to achieve functional programming, which is a programming paradigm focused on writing code in a declarative and expressive manner. Lambda expressions enable you to treat functions as first-class citizens, allowing you to pass behavior (functions) as arguments to methods, return functions from methods, and assign functions to variables.
+
+
+
+Que 5-is it mandatory for lambda expression to have parameters ?
+Ans 
+No, it is not mandatory for a lambda expression to have parameters. A lambda expression can have zero or more parameters, depending on the functional interface it is implementing. If the functional interface has no abstract method with parameters, you can use a lambda expression without any parameters.
+
+@FunctionalInterface
+public interface MyFunction {
+    void doSomething();
+}
+
+
+This functional interface has a single abstract method doSomething() that takes no parameters and returns void. You can use a lambda expression to implement this interface without any parameters:
+
+
+public class Main {
+    public static void main(String[] args) {
+        MyFunction myFunction = () -> {
+            System.out.println("Doing something...");
+        };
+        myFunction.doSomething(); // Output: Doing something...
+    }
+}
+
+
+In this example, the lambda expression () -> { ... } has no parameters, as the doSomething() method of the MyFunction interface does not take any parameters.
+
+Lambda expressions are flexible and can adapt to the functional interface's abstract method signature, which means they can have zero, one, or more parameters as required by the functional interface they are implementing.
+
+
+
+
+

@@ -1,0 +1,198 @@
+Que 1-what is the inheritance in java ?
+Ans 1-
+Inheritance is one of the fundamental concepts in object-oriented programming (OOP) and is a key feature of the Java programming language. It allows a class to inherit the properties and behaviors (fields and methods) of another class, known as the superclass or parent class. The class that inherits from the superclass is called the subclass or child class.
+
+Inheritance is represented using the extends keyword in Java. When a subclass extends a superclass, it inherits all the non-private members (fields and methods) of the superclass. The subclass can then add additional members or override the inherited methods to customize its behavior.
+
+
+
+Que 2-what is super class and subclass?
+Ans 2-
+
+In object-oriented programming (OOP), a superclass is a class that is extended or inherited by another class. It is also referred to as a parent class or base class. The superclass provides a common set of properties (fields) and behaviors (methods) that can be shared by its subclasses.
+
+A subclass, on the other hand, is a class that extends or inherits from a superclass. It is also called a child class or derived class. The subclass inherits all the properties and behaviors of its superclass and can also have its own unique properties and behaviors.
+
+Inheritance is the mechanism by which a subclass inherits the fields and methods of its superclass. This allows the subclass to reuse the code of the superclass and add additional features or behaviors specific to itself.
+
+
+
+
+Que 3-How inheritance acheive and implement in the java ?
+Ans 3-Inheritance is achieved in Java using the extends keyword. It allows a subclass (also known as a derived class or child class) to inherit the properties and behaviors of a superclass (also known as a base class or parent class). Here's how inheritance is implemented in Java:
+
+Define the Superclass: Create a class that contains the common properties and behaviors that you want to share among different classes. This class will serve as the superclass.
+
+Define the Subclass: Create another class that will extend the superclass. To do this, use the extends keyword followed by the name of the superclass. The subclass will inherit all the fields and methods of the superclass.
+
+Override Methods (Optional): If the subclass needs to provide a different implementation for a method inherited from the superclass, it can do so by using the method overriding feature. To override a method, use the same method signature (name and parameters) in the subclass and provide the new implementation.
+
+Create Objects: After defining the superclass and subclass, you can create objects of both classes. Objects of the subclass will have access to both the methods and fields of the superclass.
+
+
+
+
+
+Que 4-what is polymorphism ?
+Ans Polymorphism is a core concept in object-oriented programming (OOP) that allows a class to take on multiple forms or have multiple behaviors. It enables a single interface to represent different types of objects, allowing objects of different classes to be treated as objects of a common superclass. Polymorphism allows code to be more flexible, reusable, and extensible.
+
+
+There are two main types of polymorphism in Java:
+
+1)Compile-time Polymorphism
+2)Run-time Polymorphism (Method Overriding)
+
+
+
+
+
+
+
+Que 5-Difference between method overloading and overriding.
+Ans 5-
+Method Overloading:
+Method overloading is a feature that allows a class to have multiple methods with the same name but different parameters.
+The methods must have different parameter lists, which means they can differ in the number or type of parameters.
+Method overloading is resolved at compile-time based on the method signature.
+The return type of the methods can be the same or different.
+Method overloading allows you to provide multiple ways to perform the same operation based on different input types.
+Method overloading happens within the same class or subclass, not across different classes.
+Method overloading is an example of compile-time polymorphism.
+
+
+
+Method Overriding:
+Method overriding is a feature that allows a subclass to provide a specific implementation for a method that is already defined in its superclass.
+The method in the subclass must have the same name, return type, and parameter list as the method in the superclass.
+Method overriding is resolved at runtime based on the actual object type.
+The purpose of method overriding is to provide a specific behavior for the method in the subclass.
+Method overriding happens between a superclass and its subclass.
+Method overriding is an example of run-time polymorphism.
+
+
+
+Que 6-what is an abstraction explain with an Example ?
+Ans 
+Abstraction is one of the four fundamental principles of object-oriented programming (OOP) and is used to simplify complex systems by breaking them down into smaller, more manageable parts. In Java, abstraction is achieved through abstract classes and interfaces. It allows you to define the structure and behavior of objects without providing the implementation details.
+
+Abstraction provides a way to hide the implementation details of an object and only expose the essential features that are relevant to the outside world. This helps in reducing complexity and allows developers to focus on the essential aspects of the system.
+
+abstract class abstraction {
+    abstract double area();
+    
+}
+class Circle extends abstraction{
+     double radius;
+     
+     Circle(double radius){
+        this.radius=radius;
+     }
+
+     @Override
+    double area(){
+        return Math.PI*radius*radius;
+    }
+
+
+}
+class square extends abstraction{
+    double side;
+
+    square(double side)
+    {
+        this.side=side;
+    }
+
+    @Override
+    double area(){
+        return side*side;
+    }
+    
+
+    public static void main(String[] args) {
+        abstraction circle=new Circle(10) ;
+        abstraction Square=new square(10);
+        System.out.println("Area of circle:"+circle.area()); 
+        System.out.println("Area of circle:"+Square.area()); 
+
+    }
+}
+
+
+Que - what is difference between abstract and final method in java explain with an Example ?
+Ans -
+Abstract Method:
+An abstract method is a method declared in an abstract class (a class with the abstract keyword) but does not have an implementation in that class.
+It is meant to be overridden by its concrete subclasses to provide specific implementations.
+Abstract methods are declared using the abstract keyword and end with a semicolon, without a method body.
+An abstract class cannot be instantiated directly, and it must be subclassed to provide concrete implementations for its abstract methods.
+If a class contains one or more abstract methods, the class itself must be declared as abstract.
+Abstract methods allow the class to provide a common interface while leaving the implementation details to the subclasses.
+
+
+A final method is a method declared in a class with the final keyword, which means it cannot be overridden by any of its subclasses.
+Once a method is marked as final in a class, no subclass can provide a different implementation for that method.
+Final methods are often used to prevent subclasses from changing the behavior of a method that is critical to the functioning of the superclass.
+Final methods are often used in the context of the template method design pattern, where the overall structure of the algorithm is defined in a final method, but certain steps are left to be implemented by subclasses.
+
+
+
+
+
+
+Que-8 what is the final class in java ?
+Ans
+In Java, a final class is a class that cannot be subclassed or extended. Once a class is declared as final, it cannot be used as a superclass, and no other class can inherit from it. This means that you cannot create subclasses or child classes of a final class.
+
+Declaring a class as final is often done when the design of the class is intended to be complete and should not be extended or modified further. It can be used to prevent any changes to the behavior or implementation of the class and is sometimes used to improve performance or security.
+
+
+
+
+Que-9 difference between abstraction and encapsulation ?
+Ans Abstraction:
+
+Abstraction is the process of simplifying complex real-world entities into their essential characteristics, focusing on what an object does rather than how it does it.
+It allows you to create abstract classes and interfaces that define a common interface for a set of related objects, without providing the specific implementation details.
+Abstraction hides the implementation details and only exposes relevant functionalities to the outside world. It enables you to work with higher-level concepts and simplifies the complexity of the underlying system.
+Abstract classes and interfaces cannot be instantiated directly; they need to be implemented or extended by concrete classes that provide the implementation details.
+Encapsulation:
+
+Encapsulation is the concept of bundling data (attributes) and methods (behaviors) that operate on that data within a single unit, called a class.
+It allows you to control the access to the internal state (data) of an object, providing public methods to interact with the object while hiding its internal representation.
+Encapsulation provides data hiding, which means that the internal details of how the data is stored and processed are hidden from the outside, protecting the integrity of the object and preventing unauthorized access.
+By encapsulating data and behaviors within a class, you ensure that the object's state can only be modified through defined methods, enforcing data consistency and reducing potential bugs and errors.
+
+
+
+
+Que 10-difference between runtime and compile time polymorphism ?
+Ans 10 
+Compile-time polymorphism (Static polymorphism):
+Compile-time polymorphism refers to the polymorphism that is resolved at compile time based on the method signatures. Method overloading is an example of compile-time polymorphism. In method overloading, multiple methods with the same name but different parameters are defined within the same class.
+
+
+Compile-time polymorphism 
+public class MathOperations {
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public double add(double a, double b) {
+        return a + b;
+    }
+
+    public int add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+
+
+In this example, we have defined three add methods with different parameter types. The compiler determines which method to call based on the number and type of arguments passed during the method invocation at compile time.
+
+
+
+// run time 
+
+
+

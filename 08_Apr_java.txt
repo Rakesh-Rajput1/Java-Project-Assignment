@@ -1,0 +1,79 @@
+Q1: Take m and n input from the user and m * n integer inputs from user and print the following:
+number of positive numbers
+number of negative numbers
+number of odd numbers
+number of even numbers
+number of 0.
+Input 1:
+Ans 
+import java.util.Scanner;
+
+public class Array{
+    public static void main(String[] args) {
+        Scanner input1=new Scanner(System.in);
+
+        System.out.println("Enter the value of m : ");
+        int m=input1.nextInt();
+        System.out.println("Enter the value of n : ");
+        int n=input1.nextInt();
+
+        int positiveCount=0;
+        int negativeCount=0;
+        int oddCount=0;
+        int evenCount=0;
+        int ZeroCount=0;
+
+        System.out.println("Enter " +   (m * n) +  " integer inputs:");
+
+        for(int i=0;i<m*n;i++)
+        {
+            int num=input1.nextInt();
+            if(num>0)
+            {
+                positiveCount++;
+            }
+            else if (num<0)
+            {
+                negativeCount++;
+            }
+            if(num%2==0)
+            {
+                evenCount++;
+            }
+            if(num%2!=0)
+            {
+                oddCount++;
+            }
+            if(num==0)
+            {
+                ZeroCount++;
+            }
+
+
+        }
+        System.out.println("Number of positive integer are:"+positiveCount);
+        System.out.println("Number of negative integer are:"+negativeCount);
+        System.out.println("Number of oddCount integer are:"+oddCount);
+        System.out.println("Number of evenCount integer are:"+evenCount);
+        System.out.println("Number of ZeroCount integer are:"+ZeroCount);
+        
+    }
+}
+
+
+
+
+Que 2-write a program to print the elements above the secondary diagonal in a user inputted
+square matrix.
+
+Matrix are
+
+			1 2 3
+			4 5 6
+			7 8 9
+	  Left Diagonal       Right Daignal
+
+
+Ans 
+
+

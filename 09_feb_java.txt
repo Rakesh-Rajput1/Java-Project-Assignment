@@ -1,0 +1,114 @@
+Que 1-what is Encapsulation in java ? why is called Data hiding ?
+Ans Encapsulation is one of the four fundamental principles of object-oriented programming (OOP) and is a mechanism that binds together the data (variables) and methods (functions) that operate on that data within a single unit called a class. It allows the data to be hidden and accessed only through the methods of the class, providing control over how the data is manipulated and preventing direct access from outside the class. This is why encapsulation is often referred to as "data hiding."
+
+In Java, encapsulation is achieved by declaring the class variables as private and providing public getter and setter methods to access and modify the private data. By doing this, the internal details of the class (i.e., its implementation) are hidden from the outside world, and the class interface (i.e., its public methods) serves as a shield to protect the data.
+
+
+
+Que 2- what are the important feature of Encapsulation?
+Ans 2- 
+1)Data Hiding
+2)Access Control:
+3)Data Protection
+4)Modularity and Maintainability:
+5)Reusability:
+6)Encapsulation and Inheritance
+7)Encapsulation and Polymorphism
+
+
+Que 3- what is getter and setter method in java Explain with Example ?
+Ans 3- Getter and setter methods in Java are used to access and modify the private data members (instance variables) of a class. They provide a way to get and set the values of the private variables from outside the class, while still maintaining control over the access to the data. Getter methods are used to retrieve the values of the variables, while setter methods are used to update the values.
+
+public class Encapsulation {
+    private String name;
+    private int Age;
+    
+
+    // Getter method for name 
+    public String getname(){
+        return name;
+    }
+    //setter method for name
+    public void setName(String name){
+        this.name=name;
+    }
+
+    //Getter method for age
+
+    public int getAge(){
+        return Age;
+    }
+
+    // setter method for age
+
+    public void setAge(int Age){
+        this.Age=Age;
+    }
+
+
+
+    public static void main(String[] args) {
+        
+    }
+    
+}
+
+
+
+Que 4-what is use of this keyword Explain with Example ?
+Ans 4 The this keyword in Java is a reference variable that refers to the current instance of the class. It is often used to differentiate between instance variables (class members) and method parameters or local variables that have the same name. The this keyword allows us to access the current object's members within the class methods
+
+public class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name; // 'this' is used to refer to the instance variable 'name'
+        this.age = age;   // 'this' is used to refer to the instance variable 'age'
+    }
+}
+
+
+
+Que 5-what is advantage of Encapsulation ?
+Ans 
+Data Protection: Encapsulation helps prevent unauthorized access and modification of the data, ensuring that only the intended methods can manipulate the data. It protects the data from accidental corruption and maintains data integrity.
+
+Flexibility: Encapsulation allows the internal implementation of a class to change without affecting the code that uses the class. As long as the class interface (public methods) remains the same, the external code can continue to work seamlessly.
+
+Reusability: Encapsulation promotes code reusability by providing a clear and well-defined interface for interacting with the class. Other parts of the program can use the class without worrying about its internal implementation.
+
+Modularity: Encapsulation enables the creation of modular and easily maintainable code. Changes made within a class do not affect other parts of the program, as long as the class interface remains consistent.
+
+
+
+Que 6-how to achieve the Encapsulation in the java ?
+Ans 6-Encapsulation in Java is achieved by using access modifiers to control the access to the class members (variables and methods). By making the data members private and providing public getter and setter methods, we can ensure that the data is hidden from direct access and can only be accessed and modified through the methods defined in the class. This way, we can control how the data is accessed and updated, promoting data security and integrity
+
+public class Encapsulation{
+    private String name;
+    private int number;
+
+
+    public String getName(){
+        return name;
+    }
+    
+    public void setName(String name)
+    {
+        this.name=name;
+    }
+
+    public int getNumber(int number){
+        return number;
+    }
+
+    public void setNumber(int number)
+    {
+        this.number=number;
+    }
+
+}
+
+
+//

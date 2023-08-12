@@ -1,0 +1,145 @@
+Que 1-what is a Map in java?
+Ans 1-In Java, a Map is a part of the Java Collections Framework and is used to store elements in the form of key-value pairs. It is an interface that defines a collection of objects, each associated with a unique key. The key and value can be of any data type, and they are stored together as pairs.
+
+The key in a Map is used to uniquely identify the value, and it must be unique within the Map. This means that you cannot have duplicate keys in a Map. However, the same value can be associated with different keys.
+
+Some key features of the Map interface in Java include:
+
+Key-Value Pair: A Map stores elements in the form of key-value pairs, where each key is associated with a single value.
+
+Unique Keys: The keys in a Map must be unique, and they are used to access the corresponding values.
+
+Methods: The Map interface provides various methods for adding, removing, and retrieving elements, as well as checking for the presence of specific keys or values.
+
+Implementations: The Map interface is implemented by several classes in the Java Collections Framework, such as HashMap, TreeMap, LinkedHashMap, and ConcurrentHashMap, each with its specific characteristics and performance trade-offs.
+
+Null Values and Keys: Some Map implementations allow null values and keys, while others may have restrictions on using null values or keys
+
+
+
+Que 2-what is commonly used implementation of map in java ?
+Ans 2-The most commonly used implementation of the Map interface in Java is HashMap. HashMap is part of the Java Collections Framework and provides a fast and efficient way to store key-value pairs. It uses a hash table data structure to store elements and provides O(1) average-case time complexity for basic operations such as insertion, retrieval, and deletion.
+
+HashMap allows null values and null keys (except for one key, as only one null key is allowed). It does not maintain the order of elements, meaning the order in which elements are inserted may not be preserved during iteration.
+
+
+
+
+Que 3-what is difference between HashMap and TreeMap ?
+Ans 3 -
+The main difference between HashMap and TreeMap in Java lies in their underlying data structures and the way they store and retrieve elements:
+
+Data Structure:
+
+HashMap: It uses a hash table data structure to store key-value pairs. Hashing is used to compute the hash code of keys, which determines the index of the key-value pair in the underlying array. HashMap provides O(1) average-case time complexity for basic operations like insertion, retrieval, and deletion.
+TreeMap: It uses a Red-Black Tree data structure to store key-value pairs. The elements are stored in a sorted order based on the natural ordering of keys (or a custom comparator, if provided). TreeMap provides O(log N) time complexity for basic operations due to the balanced binary search tree.
+Ordering:
+
+HashMap: It does not maintain any order of elements. The order in which elements are inserted into the HashMap is not preserved during iteration.
+TreeMap: It maintains the elements in a sorted order based on the natural ordering of keys (or a custom comparator). This means that the elements are sorted according to their keys, making it useful for scenarios where you need to access elements in a specific order.
+Null Keys:
+
+HashMap: Allows one null key and multiple null values.
+TreeMap: Does not allow null keys, as it relies on natural ordering or custom comparator to determine the position of elements.
+Performance:
+
+HashMap: Generally provides better performance for most scenarios, especially when the number of elements is large. The average-case time complexity for basic operations is O(1).
+TreeMap: Provides predictable logarithmic time complexity (O(log N)) for basic operations, which might be slightly slower compared to HashMap for large datasets
+
+
+
+Que 4-how to you check if a key exits in Map in java ?
+Ans 4-To check if a key exists in a Map in Java, you can use the containsKey() method. This method returns true if the Map contains the specified key, and false otherwise
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a HashMap
+        Map<String, Integer> map = new HashMap<>();
+
+        // Add some key-value pairs to the map
+        map.put("apple", 1);
+        map.put("banana", 2);
+        map.put("orange", 3);
+
+        // Check if a key exists in the map
+        String keyToCheck = "banana";
+        if (map.containsKey(keyToCheck)) {
+            System.out.println("Key '" + keyToCheck + "' exists in the map.");
+        } else {
+            System.out.println("Key '" + keyToCheck + "' does not exist in the map.");
+        }
+    }
+}
+
+
+
+In this example, we create a HashMap and add three key-value pairs to it. Then, we check if the key "banana" exists in the map using the containsKey() method. Since the key "banana" is present in the map, the output will be:
+
+
+
+Que 5- what is generics in java ?
+Ans 5-Generics in Java is a feature that allows you to define classes, interfaces, and methods that can work with different types (data types) while providing compile-time type safety. It allows you to write code that is more flexible, reusable, and type-safe, without having to write separate implementations for each data type.
+
+Generics are represented using angle brackets (<>) and type parameters. When you define a generic class, interface, or method, you can specify a type parameter inside the angle brackets. This type parameter acts as a placeholder for the actual data type that will be used when you create an object of that generic class or call a generic method
+
+
+
+Que 6-what are the benefits of using Generic in java ?
+Ans 6-Type Safety: Generics ensure that you use the correct data types at compile time. This prevents ClassCastException and other type-related runtime errors, making your code more robust and less error-prone.
+
+Code Reusability: Generics allow you to write code that can work with different data types. This makes your code more reusable since you can use the same generic class or method with various data types without having to write separate implementations.
+
+Clean and Readable Code: Generics eliminate the need for explicit type casting, making the code cleaner and more readable. The type parameter provides a clear indication of the data type being used, improving code readability and maintainability.
+
+Performance Improvement: Generics enable the compiler to perform more efficient type checks at compile time, which can lead to better performance compared to using Object types and performing runtime type casting.
+
+Stronger Type Checking: With generics, the compiler can enforce strong type checking, ensuring that you use the correct data types throughout your code. This helps catch type-related errors early in the development process.
+
+Reduced Code Duplication: By using generics, you can avoid writing duplicate code for different data types, leading to more concise and maintainable code.
+
+Improved API Design: Generics are extensively used in Java's core collection framework, which allows you to create generic data structures and algorithms. This leads to a more consistent and well-designed API
+
+
+Que 7-what is the generic class in java ?
+Ans 7-In Java, a generic class is a class that is parameterized with one or more type parameters. These type parameters allow the class to work with different data types without having to write separate implementations for each data type.
+
+A generic class is defined using angle brackets (<>) and the type parameter(s) inside those brackets. For example, the syntax for declaring a generic class with a single type parameter 
+
+
+
+
+
+Que 8-what is a type parameter in java Generics?
+Ans 8-In Java Generics, a type parameter is a placeholder for a specific type that is used to make a class or method more flexible and reusable. It allows you to define a class or method without specifying the actual data type it will work with. Instead, you use a type parameter, represented by a single capital letter (commonly "T" for "Type"), to denote the unspecified data type.
+
+When you create an instance of a generic class or call a generic method, you specify the actual data type that the type parameter should take. This is known as providing a "type argument.
+
+
+
+Que 9-what is a Generic method in java?
+Ans 9
+In Java, a generic method is a method that is declared with one or more type parameters, allowing it to work with different data types. Just like generic classes, generic methods add flexibility and reusability to your code by allowing you to write methods that can handle various data types without sacrificing type safety.
+
+
+
+Que 10 what is difference between array and arrayList<T> ?
+Ans 10The main differences between arrays and ArrayList in Java are as follows:
+
+Type Safety:
+
+Arrays: Arrays in Java can hold elements of any data type, including primitives and objects, but they are not type-safe at compile-time. You can store different data types in the same array.
+ArrayList: ArrayList is a generic class in Java, which means it can be parameterized with a specific data type using angle brackets ("< >"). The type parameter makes ArrayList type-safe at compile-time, and it can only hold elements of the specified data type.
+Resizing:
+
+Arrays: The size of an array is fixed and cannot be changed once it is created. If you need to add or remove elements from an array, you have to create a new array with a different size and copy the elements.
+ArrayList: ArrayList is dynamic in size and can grow or shrink automatically as elements are added or removed. It handles resizing internally, so you don't need to worry about managing the size manually.
+Methods and Flexibility:
+
+Arrays: Arrays have limited methods compared to ArrayList. For example, arrays do not have methods for adding or removing elements directly. You have to use System.arraycopy or other manual techniques to modify the elements.
+ArrayList: ArrayList provides a rich set of methods for adding, removing, searching, and manipulating elements. It offers more flexibility and ease of use when working with collections of elements.
+Performance:
+
+Arrays: Since arrays have a fixed size, they can be more memory-efficient when you know the exact number of elements you need to store.
+ArrayList: ArrayList uses dynamic resizing, which can lead to some overhead in terms of memory and performance. However, it offers more convenience when dealing with collections that may change in size.

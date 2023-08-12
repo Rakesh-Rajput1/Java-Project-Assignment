@@ -1,0 +1,178 @@
+Que-1 Write a program to print the sum of all the elements present on even indices in the given array.
+Input 1: arr[] = {3,20,4,6,9}
+Output 1: 16
+
+Ans-
+public class Array {
+    public static int getSomeOnEvenindex(int[] arr){
+        int sum=0;
+        for(int i=0;i<arr.length;i+=2)
+        {
+            sum+=arr[i];
+        }
+        return sum;
+    }
+    public static void main(String[] args) {
+        int [] val={3,20,4,6,9};
+        int sum=getSomeOnEvenindex(val);
+        System.out.println("Dear user some of element of array on the even index:" + sum);
+    }
+
+    
+}
+
+
+Que 2-Write a program to traverse over the elements of the array using for each loop and print all even
+elements.
+Input 1: arr[] = {34,21,54,65,43}
+Output 1: 34 54
+
+public class Array{
+    public static void main(String[] args) {
+        int [] arr={34,21,54,65,43};
+
+        for(int i:arr)
+        {
+            if(i%2==0)
+            {
+                System.out.print(i+" ");
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+ Que 3- Q3: Write a program to calculate the maximum element in the array.
+// Input 1: arr[] = {34,21,54,65,43}
+// Output 1: 65
+// Input 1: arr[] = {4,3,6,7,1}
+// Output 1: 7
+// a-part
+
+public class Array{
+    public static int findMaxElement(int[] arr)
+    {
+        int max_value=arr[0];
+
+        for(int i=1;i<arr.length;i++)
+        {
+            if(arr[i]>max_value)
+            {
+                max_value=arr[i];
+            }
+        }
+        return max_value;
+    }
+    public static void main(String[] args) {
+        int [] arr={34,21,54,65,43};
+        int maxElement=findMaxElement(arr);
+        System.out.println(maxElement);
+    }
+}
+
+
+
+
+
+	
+Input 1: arr[] = {4,3,6,7,1}
+Output 1: 6
+
+public class Array{
+    public static int findSecondLargest2(int[] arr)
+    {
+        if(arr.length<2)
+        {
+            throw new IllegalArgumentException("length of array should be greater then 2:");
+        }
+        int largest3=Integer.MIN_VALUE;
+        int secondlargest1=Integer.MIN_VALUE;
+
+        for(int i:arr)
+        {
+            if(i>largest3)
+            {
+                secondlargest1=largest3;
+                largest3=i;
+            }
+            else if(i>secondlargest1 && i!=largest3)
+            {
+                secondlargest1=i;
+            }
+        }
+        return secondlargest1;
+
+    }
+    public static void main(String[] args) {
+        int [] arr4={4,3,6,7,1};
+        int secondlgst2=findSecondLargest2(arr4);
+        System.out.println("second larget element in the array are:"+secondlgst2);
+    }
+}
+
+
+
+Q5: Given an array. Find the first peak element in the array. A peak element is an element that is greater than
+its just left and just right neighbor.
+Input 1: arr[] = {1,3,2,6,5}
+Output 1: 6
+Input 2: arr[] = {1 4,7,3,2,6,5}
+Output 1: 7
+
+public class Array{
+    public static int findPeakElement(int[] arr)
+    {
+        for(int i=1;i<arr.length-1;i++)
+        {
+            if(arr[i]>arr[i-1] && arr[i]>arr[i+1])
+            {
+                return arr[i];
+            }
+        }
+        return -1;
+    }
+    public static void main(String[] args) {
+        int[] arr5={1,3,2,6,5};
+        int peakElement=findPeakElement(arr5);
+        if(peakElement!=-1)
+        {
+            System.out.println("The first peak element is:"+peakElement);
+        }
+        else
+        {
+            System.out.println("No peak element");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
